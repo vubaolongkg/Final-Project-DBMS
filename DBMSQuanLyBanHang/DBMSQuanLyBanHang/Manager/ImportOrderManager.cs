@@ -37,14 +37,18 @@ namespace DBMSQuanLyBanHang.Manager
             {
                 if (row.Cells["MaSanPham"].Value != null &&
                     row.Cells["SoLuong"].Value != null &&
-                    row.Cells["GiaNhap"].Value != null)
+                    row.Cells["GiaNhap"].Value != null &&
+                    row.Cells["NgaySanXuat"].Value != null &&
+                    row.Cells["HanSuDung"].Value != null)
                 {
                     int maSP = Convert.ToInt32(row.Cells["MaSanPham"].Value);
                     int soLuong = Convert.ToInt32(row.Cells["SoLuong"].Value);
                     decimal giaNhap = Convert.ToDecimal(row.Cells["GiaNhap"].Value);
+                    DateTime ngaySanXuat = Convert.ToDateTime(row.Cells["NgaySanXuat"].Value);
+                    DateTime hanSuDung = Convert.ToDateTime(row.Cells["HanSuDung"].Value);
 
-                    // Ghép các giá trị thành chuỗi 'MaSP,SoLuong,DonGia;'
-                    chiTietDonNhap += $"{maSP},{soLuong},{giaNhap};";
+                    // Ghép các giá trị thành chuỗi 'MaSP,SoLuong,DonGia,NgaySanXuat,HanSuDung;'
+                    chiTietDonNhap += $"{maSP},{soLuong},{giaNhap},{ngaySanXuat:yyyy-MM-dd},{hanSuDung:yyyy-MM-dd};";
                 }
             }
 
@@ -87,5 +91,6 @@ namespace DBMSQuanLyBanHang.Manager
                 db.closeConnection(); // Đóng kết nối
             }
         }
+
     }
 }

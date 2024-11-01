@@ -38,6 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.NgaySanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HanSuDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,9 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSanPham,
             this.SoLuong,
-            this.GiaNhap});
+            this.GiaNhap,
+            this.NgaySanXuat,
+            this.HanSuDung});
             this.dataGridView1.Location = new System.Drawing.Point(56, 178);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -130,6 +134,20 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Mã nhà cung cấp:";
             // 
+            // NgaySanXuat
+            // 
+            this.NgaySanXuat.HeaderText = "NgaySanXuat";
+            this.NgaySanXuat.MinimumWidth = 6;
+            this.NgaySanXuat.Name = "NgaySanXuat";
+            this.NgaySanXuat.Width = 125;
+            // 
+            // HanSuDung
+            // 
+            this.HanSuDung.HeaderText = "HanSuDung";
+            this.HanSuDung.MinimumWidth = 6;
+            this.HanSuDung.Name = "HanSuDung";
+            this.HanSuDung.Width = 125;
+            // 
             // ImportOrderManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -162,5 +180,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySanXuat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HanSuDung;
     }
 }
